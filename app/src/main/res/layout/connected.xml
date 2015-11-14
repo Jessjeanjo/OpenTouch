@@ -1,6 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/black_overlay"
+tools:context=".FullscreenActivity">
 
-</LinearLayout>
+<!-- The primary full-screen view. This can be replaced with whatever view
+     is needed to present your content, e.g. VideoView, SurfaceView,
+     TextureView, etc. -->
+<TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
+    android:textStyle="bold" android:textSize="50sp" android:gravity="center"
+    android:layout_alignParentStart="true"
+    android:background="#FFF" />
+
+
+    <Button android:id="@+id/band_button" style="?metaButtonBarButtonStyle"
+        android:layout_width="225dp" android:layout_height="114dp"
+        android:layout_weight="1"
+        android:text="Band Connected" android:textSize="30dp"
+        android:textColor="@color/black_overlay"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/myo_button"
+        android:layout_alignStart="@+id/myo_button"
+        android:layout_marginTop="40dp"
+        android:allowUndo="false"
+        android:background="#FFF" />
+
+    <Button android:id="@+id/myo_button" style="?metaButtonBarButtonStyle"
+        android:layout_width="225dp" android:layout_height="114dp"
+        android:layout_weight="1"
+        android:text="Myo Connected" android:textSize="30dp"
+        android:textColor="@color/black_overlay"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="82dp"
+        android:layout_below="@+id/band_button"
+        android:layout_centerHorizontal="true"
+        android:background="#FFF" />
+
+
+
+</RelativeLayout>

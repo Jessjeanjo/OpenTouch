@@ -1,22 +1,18 @@
 package io.jess.openfeel;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
-android.widget.Button
+        import android.annotation.SuppressLint;
+        import android.support.v7.app.ActionBar;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.os.Handler;
+        import android.view.MotionEvent;
+        import android.view.View;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class FullscreenActivity extends AppCompatActivity {
-
-
+public class ConnectionActivity extends AppCompatActivity {
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -62,19 +58,6 @@ public class FullscreenActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
-
-
-        Button fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-                Intent intent = new Intent(MainActivity.this, Camera_S2.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
     @Override
