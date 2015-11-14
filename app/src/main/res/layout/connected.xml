@@ -27,7 +27,7 @@ tools:context=".FullscreenActivity">
         android:text="Band Connected" android:textSize="30dp"
         android:textColor="@color/black_overlay"
         android:layout_gravity="center_horizontal|top"
-        android:layout_marginTop="121dp"
+        android:layout_marginTop="93dp"
         android:allowUndo="false"
         android:background="#FFF"
         android:layout_below="@+id/fullscreen_content_controls"

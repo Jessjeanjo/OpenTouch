@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
+=======
+    <mapping directory="$PROJECT_DIR$/myo-android-sdk-0.10.0/samples" vcs="Git" />
+>>>>>>> ebe7815e532446ed50160262c9a89368f7594890
   </component>
 </project>
