@@ -13,6 +13,9 @@
 		C83B73D81BF70C8F00EEB97E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83B73D71BF70C8F00EEB97E /* Images.xcassets */; };
 		C83B73DB1BF70C8F00EEB97E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83B73D91BF70C8F00EEB97E /* LaunchScreen.xib */; };
 		C83B73E71BF70C8F00EEB97E /* OpenFeelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83B73E61BF70C8F00EEB97E /* OpenFeelTests.swift */; };
+		C83B73F51BF711F400EEB97E /* MicrosoftBandKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83B73F41BF711F400EEB97E /* MicrosoftBandKit_iOS.framework */; };
+		C83B73F71BF7121100EEB97E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83B73F61BF7121100EEB97E /* CoreBluetooth.framework */; };
+		C83B73F91BF7121E00EEB97E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83B73F81BF7121E00EEB97E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,10 @@
 		C83B73E01BF70C8F00EEB97E /* OpenFeelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenFeelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83B73E51BF70C8F00EEB97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C83B73E61BF70C8F00EEB97E /* OpenFeelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFeelTests.swift; sourceTree = "<group>"; };
+		C83B73F21BF711EB00EEB97E /* OpenFeel */ = {isa = PBXFileReference; lastKnownFileType = folder; name = OpenFeel; sourceTree = "<group>"; };
+		C83B73F41BF711F400EEB97E /* MicrosoftBandKit_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicrosoftBandKit_iOS.framework; path = ../../Downloads/MicrosoftBandKit_iOS_SAMPLES_1.3.10929.1/MicrosoftBandKit_iOS.framework; sourceTree = "<group>"; };
+		C83B73F61BF7121100EEB97E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C83B73F81BF7121E00EEB97E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83B73F91BF7121E00EEB97E /* SystemConfiguration.framework in Frameworks */,
+				C83B73F71BF7121100EEB97E /* CoreBluetooth.framework in Frameworks */,
+				C83B73F51BF711F400EEB97E /* MicrosoftBandKit_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,10 @@
 		C83B73C21BF70C8F00EEB97E = {
 			isa = PBXGroup;
 			children = (
+				C83B73F81BF7121E00EEB97E /* SystemConfiguration.framework */,
+				C83B73F61BF7121100EEB97E /* CoreBluetooth.framework */,
+				C83B73F41BF711F400EEB97E /* MicrosoftBandKit_iOS.framework */,
+				C83B73F21BF711EB00EEB97E /* OpenFeel */,
 				C83B73CD1BF70C8F00EEB97E /* OpenFeel */,
 				C83B73E31BF70C8F00EEB97E /* OpenFeelTests */,
 				C83B73CC1BF70C8F00EEB97E /* Products */,
@@ -340,6 +354,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/owner/Downloads/MicrosoftBandKit_iOS_SAMPLES_1.3.10929.1,
+				);
 				INFOPLIST_FILE = OpenFeel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +368,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/owner/Downloads/MicrosoftBandKit_iOS_SAMPLES_1.3.10929.1,
+				);
 				INFOPLIST_FILE = OpenFeel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
