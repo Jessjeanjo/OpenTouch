@@ -26,7 +26,7 @@
 
         </LinearLayout>
 
-        <Button android:id="@+id/dummy_button" style="?metaButtonBarButtonStyle"
+        <Button android:id="@+id/connection_button" style="?metaButtonBarButtonStyle"
             android:layout_width="178dp" android:layout_height="114dp"
             android:layout_weight="1"
             android:text="Connect" android:textSize="30dp"

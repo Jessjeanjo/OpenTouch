@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
-android.widget.Button
+import android.widget.Button;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -61,16 +61,16 @@ public class FullscreenActivity extends AppCompatActivity {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        findViewById(R.id.connection_button).setOnTouchListener(mDelayHideTouchListener);
 
 
-        Button fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Button connect = (Button) findViewById(R.id.connection_button);
+        connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-                Intent intent = new Intent(MainActivity.this, Camera_S2.class);
+                Intent intent = new Intent(FullscreenActivity.this, ConnectionActivity.class);
                 startActivity(intent);
             }
         });
