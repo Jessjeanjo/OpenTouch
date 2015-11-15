@@ -19,7 +19,17 @@ import com.microsoft.band.BandException;
 import com.microsoft.band.BandInfo;
 import com.microsoft.band.BandIOException;
 import com.microsoft.band.ConnectionState;
+
+//MYO
 import com.thalmic.myo.Hub;
+import com.thalmic.myo.scanner.ScanActivity;
+import android.content.Intent;
+import com.thalmic.myo.DeviceListener;
+import com.thalmic.myo.AbstractDeviceListener;
+import android.widget.Toast;
+import com.thalmic.myo.Myo;
+import com.thalmic.myo.Pose;
+
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -89,13 +99,22 @@ public class FullscreenActivity extends AppCompatActivity {
         });
 
 
-//        //MYO
-//        Hub hub = Hub.getInstance();
-//        if (hub.init(this)) {
-//            Log.e(TAG, "Could  initialize the Hub.");
-//            finish();
-//            return;
-//        }
+        //MYO
+        Hub hub = Hub.getInstance();
+        if (!hub.init(this)) {
+            Log.e(TAG, "Could not initialize the Hub.");
+            finish();
+            return;
+        } else {
+            Log.e(TAG, "Hub Initialized");
+        }
+
+        Intent intent = new Intent(FullscreenActivity.this, ScanActivity.class);
+        startActivity(intent);
+
+
+        Hub.getInstance().addListener(mListener);
+
     }
 
     @Override
@@ -283,4 +302,36 @@ public class FullscreenActivity extends AppCompatActivity {
         return ConnectionState.CONNECTED == client.connect().await();
     }
 
+
+
+
+
+    //======================================MYO======================================//
+
+    private DeviceListener mListener = new AbstractDeviceListener() {
+
+            @Override
+        public void onConnect(Myo myo, long timestamp) {
+            Toast.makeText(getApplicationContext(), "Myo Connected!", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onDisconnect(Myo myo, long timestamp) {
+            Toast.makeText(getApplicationContext(), "Myo Disconnected!", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onPose(Myo myo, long timestamp, Pose pose) {
+            Toast.makeText(getApplicationContext(), "Pose: " + pose, Toast.LENGTH_SHORT).show();
+
+            //TODO: Do something awesome.
+
+            if (pose.toString() == "REST"){
+                Toast.makeText(getApplicationContext(), "YO SON I JUST REGISTERED YOUR IF STATEMENT " + pose, Toast.LENGTH_SHORT).show();
+
+            }
+
+
+        }
+    };
 }
